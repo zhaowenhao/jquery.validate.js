@@ -1,7 +1,9 @@
 /**
- * jquery验证表单组件。
+ * jquery表单验证插件
+ *
  * @file jquery.validate.js
  * @version 1.0.0
+ * @license MIT
  * @author zhaowenhao
  *
  */
