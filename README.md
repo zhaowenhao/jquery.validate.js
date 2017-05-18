@@ -57,7 +57,7 @@ jquery表单验证插件
 `cleanError`默认函数如下
 
 ```javascript
-    unction cleanError(options) {
+    function cleanError(options) {
         $(this).removeClass(options.error_input_class).next('.' + options.error_message_class).remove();
     }
 ```
