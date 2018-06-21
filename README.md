@@ -19,8 +19,8 @@ jquery表单验证插件
 
 1. 引入插件后，会引入validate和validated两个对象级别的方法，使用方法:
     ```javascript
-        $('#fieldId').validate(options);
-        $('#formId').validated(onSuccess, onFailure);
+        $('#fieldId').validate(options); //单个表单域验证配置
+        $('#formId').validated(onSuccess, onFailure); //整个表单验证方法，#formId 可以是任意一个包含所有表单域的父元素
     ```
 
 2. validate的参数options是一个对象，对象的属性如下：
@@ -62,5 +62,11 @@ jquery表单验证插件
     }
 ```
 
-3. validated的两个参数都是函数，整个表单验证通过时回调第一个函数onSuccess，未通过时调用第二个参数onFailure
+3. 表单提交时使用验证方法validated，使用的元素是包含所有表单域的任意父元素。
+    validated方法的两个参数都是函数，表单验证通过时回调第一个函数onSuccess，未通过时调用第二个参数onFailure，具体使用参见[demo](https://github.com/zhaowenhao/jquery.validate.js/blob/master/demo/index.html)
 
+
+TIPS:
+    如果想单独验证一下某个表单域可以使用方法：`$('#fieldId').trigger('validate')`
+
+ 
