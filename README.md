@@ -35,7 +35,7 @@ jquery表单验证插件
 | `mode`               | 验证模式，`1`：正常input表单验证，`2`：`expression`函数会有一个回调函数的参数，用于异步校验，`3`：用于select验证 | `1` &#124; `2` &#124; `3` | `1` |
 | `error_input_class`  | 验证未通过时，被验证元素添加的样式                            | string                             | 'error'                       |
 | `error_message_class`| 验证未通过时，提示语的样式                                  | string                              | 'valid-error'                   |
-| `showError`          | 错误提示的显示方式，函数中的this指向当前验证元素               | function(options, fieldResult){}   | 验证未通过时，元素添加`error_input_class`样式，并且在其后面添加一个`error_message_class`样式的div显示提示语 |
+| `showError`          | 错误提示的显示方式，函数中的this指向当前验证元素（当默认的错误提示方式不能满足需求时，请重写该方法和`cleanError`方法）               | function(options, fieldResult){}   | 验证未通过时，元素添加`error_input_class`样式，并且在其后面添加一个`error_message_class`样式的div显示提示语 |
 | `cleanError`         | 清除错误提示，重写`showError`时，一定要重写该方法             | function(options) {}               | 清除验证元素的`error_input_class`，并清除后面的提示语 |
 
 `expression`当其为函数时会有下列参数
